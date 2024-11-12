@@ -17,7 +17,7 @@ public class ScoringSystem : MonoBehaviour
         UpdateScoreText();
     }
 
-    void UpdateScoreText()
+    public void UpdateScoreText()
     {
         if (scoreText != null)
         {

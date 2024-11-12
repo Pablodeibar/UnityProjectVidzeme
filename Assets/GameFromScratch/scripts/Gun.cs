@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float shootForce = 20f;
+    public float shootForce = 40f;
     public float fireRate = 0.5f;
     private float nextFireTime;
 
@@ -24,7 +24,7 @@ public class Gun : MonoBehaviour
     bool IsFireButtonHeld()
     {
         // Replace this with the appropriate input method for your VR setup
-        return Input.GetKey(KeyCode.JoystickButton0); // Typically "A" button on most controllers
+        return Input.GetKey(KeyCode.JoystickButton0);
     }
 
     void Shoot()
