@@ -328,10 +328,10 @@ GameObject:
   - component: {fileID: 215356393692755168}
   - component: {fileID: 165050434415794333}
   - component: {fileID: 809613494786767836}
+  - component: {fileID: 6769119817716373966}
   - component: {fileID: 5420189313901640956}
   - component: {fileID: 5167079268283619910}
   - component: {fileID: 5831989904293407574}
-  - component: {fileID: 6769119817716373966}
   - component: {fileID: 779499041984545832}
   m_Layer: 0
   m_Name: Bird flying
@@ -349,8 +349,8 @@ Transform:
   m_GameObject: {fileID: 6341935205032782235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1378946, y: 3.11, z: -32.59257}
-  m_LocalScale: {x: 0.55029225, y: 0.55029225, z: 0.55029225}
+  m_LocalPosition: {x: -3.142816, y: 0.74, z: -37.68575}
+  m_LocalScale: {x: 0.22927377, y: 0.22927377, z: 0.22927377}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 122343130563931191}
@@ -392,11 +392,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
-  lifetime: 10
+  lifetime: 40
   creationSound: {fileID: 8300000, guid: 8e0a17545e86d4e449c237b53eda582e, type: 3}
   hitSound: {fileID: 8300000, guid: 0bc63751b601e73499ead23271765f3d, type: 3}
-  destructionParticles: {fileID: 242825863280431633, guid: 3bfd5024802f88642b365bf59fc08e91,
+  destructionParticles: {fileID: 6354021236886108241, guid: 7a8ec54d786437049864635125fd7658,
     type: 3}
+--- !u!114 &6769119817716373966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341935205032782235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205b89166d75ee143a88ee90a8fed096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkRadius: 50
+  walkSpeed: 3.5
+  runSpeed: 7
+  runProbability: 0.5
+  changeInterval: 5
+  maxNavMeshRetryAttempts: 10
+  retryDelay: 0.1
 --- !u!82 &5420189313901640956
 AudioSource:
   m_ObjectHideFlags: 0
@@ -542,21 +561,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6769119817716373966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6341935205032782235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205b89166d75ee143a88ee90a8fed096, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!195 &779499041984545832
 NavMeshAgent:
   m_ObjectHideFlags: 0

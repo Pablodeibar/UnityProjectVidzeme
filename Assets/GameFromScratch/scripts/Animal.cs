@@ -3,7 +3,7 @@ using UnityEngine;
 public class Animal : MonoBehaviour
 {
     public int points = 10; // Points to add when hit by a bullet
-    public float lifetime = 10f; // Time in seconds before the animal is destroyed automatically
+    public float lifetime = 40f; // Time in seconds before the animal is destroyed automatically
     public AudioClip creationSound; // Sound to play when the animal is created
     public AudioClip hitSound; // Sound to play when the animal is hit
     public GameObject destructionParticles; // Particle system prefab to instantiate
