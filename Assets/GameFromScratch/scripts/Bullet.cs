@@ -20,8 +20,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        // Optional: Check if the bullet goes out of bounds
-        if (transform.position.y < -10) // Example condition for out of bounds
+        if (transform.position.y < -30)
         {
             Destroy(gameObject);
         }

@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     public float lifetime = 5f; // Time in seconds before the projectile is destroyed automatically
     public AudioClip creationSound; // Sound to play when the projectile is created
     public AudioClip hitSound; // Sound to play when the projectile is hit
+    public GameObject destructionParticles; // Particle system prefab to instantiate
 
     void Start()
     {
@@ -33,6 +34,12 @@ public class Projectile : MonoBehaviour
             if (hitSound != null)
             {
                 PlaySound(hitSound);
+            }
+
+            // Instantiate destruction particles
+            if (destructionParticles != null)
+            {
+                Instantiate(destructionParticles, transform.position, transform.rotation);
             }
 
             Destroy(collision.gameObject); // Destroy the bullet

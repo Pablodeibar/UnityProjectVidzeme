@@ -10,10 +10,16 @@ public class GameManager : MonoBehaviour
     public Text scoreText;  // Reference to ScoreText
     public ScoringSystem scoringSystem;
     public GameObject gameEndPanel;
+    public AudioClip endGameSound; // Sound to play when the game ends
     public int targetScore = 50; // Score required to end the game
+
+    private AudioSource audioSource;
 
     void Start()
     {
+        // Get the AudioSource component
+        audioSource = GetComponent<AudioSource>();
+
         // Hide score text at the start
         scoreText.gameObject.SetActive(false);
         // Show intro text at the start
@@ -46,6 +52,13 @@ public class GameManager : MonoBehaviour
     {
         // Display game end message
         gameEndPanel.SetActive(true);
+
+        // Play end game sound
+        if (endGameSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(endGameSound);
+        }
+
         // Reload the scene after a delay
         StartCoroutine(ReloadScene());
     }

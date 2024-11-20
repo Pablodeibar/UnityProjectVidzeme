@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.234593, y: -1.16, z: 8.495505}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5745, y: 1.5745, z: 1.5745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -154,6 +154,8 @@ MonoBehaviour:
   lifetime: 5
   creationSound: {fileID: 8300000, guid: 8a3174a11789d6d4893706b52cc09caa, type: 3}
   hitSound: {fileID: 8300000, guid: 0c4d166cba2a28d4c93313abd7079b0c, type: 3}
+  destructionParticles: {fileID: 4055057568612492430, guid: f47cb00667b03114f9a39ae89554302f,
+    type: 3}
 --- !u!82 &7040210574840522404
 AudioSource:
   m_ObjectHideFlags: 0
@@ -164,8 +166,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8a3174a11789d6d4893706b52cc09caa, type: 3}
-  m_Resource: {fileID: 8300000, guid: 8a3174a11789d6d4893706b52cc09caa, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
