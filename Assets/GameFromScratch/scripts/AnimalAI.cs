@@ -82,12 +82,12 @@ public class AnimalAI : MonoBehaviour
             if (Random.value < runProbability)
             {
                 agent.speed = runSpeed;
-                Debug.Log("Running to: " + finalPosition);
+                //Debug.Log("Running to: " + finalPosition);
             }
             else
             {
                 agent.speed = walkSpeed;
-                Debug.Log("Walking to: " + finalPosition);
+                //Debug.Log("Walking to: " + finalPosition);
             }
 
             agent.SetDestination(finalPosition);

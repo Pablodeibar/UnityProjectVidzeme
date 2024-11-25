@@ -5,24 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/XR Demo.unity
-    guid: a1360534006d3f845bc79b46b93cfec5
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Scene Transitioning.unity
-    guid: 9d7c9629abf9c99449e358b0938b47d0
   - enabled: 1
-    path: Assets/BNG Framework/Scenes/Physics Hands.unity
-    guid: 34a4579517c578e4080d0a6ef2c96294
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Rigidbody Player.unity
-    guid: 57fc97c5771a777449aa8bd02514df22
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Vehicle Example.unity
-    guid: d96233ee44d985d4fb8dc23a907c06eb
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Quest Demo.unity
-    guid: eac0312c32df12949a47d07747a9d1cd
+    path: Assets/GameFromScratch/scene/IntroScene.unity
+    guid: a92f60c863fdb1542bd212da32459b27
+  - enabled: 1
+    path: Assets/GameFromScratch/scene/MainGameScene.unity
+    guid: 37c1054d0265492469bcf34ea3df2954
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8434dd8797f7b8e4890ef9b46a21826c,
       type: 2}
@@ -35,3 +23,4 @@ EditorBuildSettings:
       type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 2ae0a4a226e8d9e4aba56d1e2eb3977b,
       type: 2}
+  m_UseUCBPForAssetBundles: 0

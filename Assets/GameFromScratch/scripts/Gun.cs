@@ -28,7 +28,6 @@ public class Gun : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        Debug.Log("Pistolet pr�t � tirer.");
 
         // Initialize LineRenderer if not assigned
         if (lineRenderer == null)
@@ -45,14 +44,10 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"Heure actuelle: {Time.time}, Prochaine heure de tir: {nextFireTime}");
-
         if (fireAction.triggered && Time.time >= nextFireTime)
         {
-            Debug.Log("Bouton de tir press�.");
             Shoot();
             nextFireTime = Time.time + fireRate;
-            Debug.Log($"Prochaine heure de tir mise � jour �: {nextFireTime}");
         }
 
         UpdateLineRenderer(); // Add this line to update the line renderer position
@@ -68,8 +63,6 @@ public class Gun : MonoBehaviour
         {
             audioSource.PlayOneShot(fireSound);
         }
-
-        Debug.Log("Balle tir�e.");
     }
 
     void UpdateLineRenderer()
