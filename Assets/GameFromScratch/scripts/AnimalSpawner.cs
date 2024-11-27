@@ -32,8 +32,6 @@ public class AnimalSpawner : MonoBehaviour
 
             // Instantiate the animal at the selected spawn point
             GameObject newAnimal = Instantiate(animalPrefab, spawnPosition, spawnPoint.rotation);
-
-            // Optionally, you can play a spawn sound or other effects here
         }
     }
 

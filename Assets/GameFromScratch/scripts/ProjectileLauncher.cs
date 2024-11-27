@@ -19,6 +19,6 @@ public class ProjectileLauncher : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.up * 10f, ForceMode.Impulse); // Adjust force as needed
+        rb.AddForce(Vector3.up * 10f, ForceMode.Impulse);
     }
 }

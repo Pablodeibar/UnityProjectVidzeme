@@ -9,20 +9,20 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text levelText;
     public Text achievementText;
-    public Text tutoGunText; // Reference to TutoGunText
-    public Text tutoTimeText; // Reference to TutoTimeText
+    public Text tutoGunText;
+    public Text tutoTimeText;
     public ScoringSystem scoringSystem;
     public GameObject gameEndPanel;
     public AudioClip endGameSound;
     public AudioClip levelUpSound;
-    public AudioClip tutorialSound; // Sound for tutorial texts
-    public string introSceneName = "IntroScene"; // Name of the intro scene
+    public AudioClip tutorialSound;
+    public string introSceneName = "IntroScene";
     public Transform cameraTransform; // Reference to the VR camera/eye anchor
 
     private AudioSource audioSource;
     private AudioSource tutoAudioSource;
     private int currentLevel = 0;
-    private int[] targetScores = { 10, 10, 10 };
+    private int[] targetScores = { 50, 100, 150 };
 
     private enum GameState { Intro, Playing, End }
     private GameState currentState;
@@ -43,8 +43,8 @@ public class GameManager : MonoBehaviour
         scoreText = GameObject.Find("ScoreText")?.GetComponent<Text>();
         levelText = GameObject.Find("LevelText")?.GetComponent<Text>();
         achievementText = GameObject.Find("AchievementsText")?.GetComponent<Text>();
-        tutoGunText = GameObject.Find("TutoGunText")?.GetComponent<Text>(); // Find TutoGunText
-        tutoTimeText = GameObject.Find("TutoTimeText")?.GetComponent<Text>(); // Find TutoTimeText
+        tutoGunText = GameObject.Find("TutoGunText")?.GetComponent<Text>();
+        tutoTimeText = GameObject.Find("TutoTimeText")?.GetComponent<Text>();
         scoringSystem = GameObject.Find("ScoreManager")?.GetComponent<ScoringSystem>();
         gameEndPanel = GameObject.Find("GameEndPanel");
 
@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
         scoreText?.gameObject.SetActive(false);
         levelText?.gameObject.SetActive(false);
         achievementText?.gameObject.SetActive(false);
-        tutoGunText?.gameObject.SetActive(false); // Hide TutoGunText at the start
-        tutoTimeText?.gameObject.SetActive(false); // Hide TutoTimeText at the start
+        tutoGunText?.gameObject.SetActive(false);
+        tutoTimeText?.gameObject.SetActive(false);
         if (gameEndPanel != null)
         {
             gameEndPanel.SetActive(false);
@@ -188,7 +188,6 @@ public class GameManager : MonoBehaviour
         {
             scoreText.text = "Score: " + scoringSystem.score;
         }
-        // Debug log to track UI update
         Debug.Log("Updated UI - Level: " + levelText?.text + " | Achievement: " + achievementText?.text + " | Score: " + scoreText?.text);
     }
 

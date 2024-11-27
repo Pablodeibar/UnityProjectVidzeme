@@ -16,8 +16,8 @@ public class Gun : MonoBehaviour
 
     private InputAction fireAction;
 
-    public LineRenderer lineRenderer; // Add this line
-    public float lineLength = 10f;    // Length of the line renderer
+    public LineRenderer lineRenderer;
+    public float lineLength = 10f; // Length of the line renderer
 
     void Awake()
     {
@@ -50,7 +50,7 @@ public class Gun : MonoBehaviour
             nextFireTime = Time.time + fireRate;
         }
 
-        UpdateLineRenderer(); // Add this line to update the line renderer position
+        UpdateLineRenderer();
     }
 
     void Shoot()

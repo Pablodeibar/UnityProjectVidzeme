@@ -43,7 +43,6 @@ namespace YourGameNamespace
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.AddForce(launchDirection * launchForce, ForceMode.Impulse);
 
-            // Update the trajectory line
             UpdateTrajectoryLine(launchDirection, projectile);
         }
 

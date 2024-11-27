@@ -1471,7 +1471,7 @@ MonoBehaviour:
   projectilePrefabs:
   - {fileID: 4047890406111071003, guid: c206b4d606ebb9b41a634f7e479ff3d7, type: 3}
   - {fileID: 7575012146789865110, guid: 4586dd82d729db946a0969b72b628f16, type: 3}
-  - {fileID: 5964923531211260992, guid: d1cf4f46d4f9d184993369f3ecc777ea, type: 3}
+  - {fileID: 3909310571213014, guid: d442e2280a0b5bb4286904479a052066, type: 3}
   launchPoint: {fileID: 1790682870}
   launchForce: 40
   launchRate: 2

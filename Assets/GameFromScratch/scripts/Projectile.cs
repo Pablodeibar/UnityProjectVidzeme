@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public int points = 10; // Points to add when hit by a bullet
-    public float lifetime = 5f; // Time in seconds before the projectile is destroyed automatically
-    public AudioClip creationSound; // Sound to play when the projectile is created
-    public AudioClip hitSound; // Sound to play when the projectile is hit
-    public GameObject destructionParticles; // Particle system prefab to instantiate
+    public int points = 10;
+    public float lifetime = 5f;
+    public AudioClip creationSound;
+    public AudioClip hitSound;
+    public GameObject destructionParticles;
 
     void Start()
     {

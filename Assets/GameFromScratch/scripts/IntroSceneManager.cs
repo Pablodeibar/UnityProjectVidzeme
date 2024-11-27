@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class IntroSceneManager : MonoBehaviour
 {
-    public string mainGameSceneName = "MainGameScene"; // Name of the main game scene
+    public string mainGameSceneName = "MainGameScene";
     public float introDuration = 7f; // Duration to play the intro scene (in seconds)
 
     void Start()
